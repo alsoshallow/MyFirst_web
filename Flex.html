@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyFirst_Flex</title>
+    <link rel="icon" href="https://my-fir-4g6k134l603e9b60-1311538898.tcloudbaseapp.com/_/favicon.ico">
+</head>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        background-color: #eee;
+    }
+
+    /* *{
+        border: 1px solid black;
+    } */
+    .flex {
+        display: flex;
+    }
+
+    .col {
+        flex-direction: column;
+    }
+
+    .baiSe {
+        background-color: white;
+    }
+
+    .flex1 {
+        flex: 1;
+    }
+
+    .mar8 {
+        margin: 8px;
+    }
+
+    .mart {
+        margin-top: 8px;
+    }
+
+    .marr {
+        margin-right: 8px;
+    }
+
+    .marr0 {
+        margin-right: 0;
+    }
+
+    .marl0 {
+        margin-left: 0;
+    }
+
+    .yinYing {
+        box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+            rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+    }
+
+    .bkb {
+        border-bottom: 1px solid #999;
+    }
+
+    .tou {
+        font-weight: bold;
+        color: gray;
+        font-size: 35px;
+    }
+
+    .jieshao {
+        margin: 0 20px;
+        color: rgb(95, 91, 91);
+        font-size: 20px;
+    }
+
+    .daohang {
+        color: #999;
+        font-size: 15px;
+        padding: 15px;
+        border-bottom: 1px solid rgb(95, 90, 90);
+    }
+
+    @media (max-width:600px) {
+        .ceBian {
+            display: none;
+        }
+
+        .neiRong {
+            flex-direction: column;
+        }
+
+        .shuJu {
+            flex-direction: column;
+        }
+
+        .youQu {
+            margin-left: 8px;
+        }
+
+        .shuju {
+            margin: 0 0 8px;
+            flex: auto;
+        }
+    }
+</style>
+
+<body class="flex">
+    <!-- 侧边栏 -->
+    <div style="width: 250px; z-index: 3;" class="baiSe yinYing flex col ceBian">
+        <!-- 侧边头像栏 -->
+        <div style="justify-content: center;align-items: center; width: 200px; padding: 10px;border-bottom: 1px solid #999;"
+            class="flex">
+            <img src="https://my-fir-4g6k134l603e9b60-1311538898.tcloudbaseapp.com/_/0f7430866dbf34e01b232272b79827ff3acf75db.jpg"
+                alt="" style="width: 60px; height: 60px;">
+            <div class="flex jieshao">我是MZK</div>
+        </div>
+        <!-- 导航栏 -->
+        <div class="flex col">
+            <div class="daohang flex">导航</div>
+            <div class="daohang flex">导航</div>
+            <div class="daohang flex">导航</div>
+            <div class="daohang flex">导航</div>
+            <div class="daohang flex">导航</div>
+        </div>
+    </div>
+    <!-- 主区域 -->
+    <div class="flex1 flex col">
+        <!-- 头部区 -->
+        <div class="baiSe yinYing bkb flex" style="height: 70px; justify-content: center; z-index: 2;">
+            <div style="justify-content: center;padding: 10px; width: 2000px;overflow: auto;" class="flex tou">
+                我的第一个Flex布局</div>
+            <!-- <div style="justify-content: center;padding: 10px; width: 1000px;" class="flex tou">我的第一个Flex布局</div> -->
+        </div>
+        <!-- 内容区 -->
+        <div class="flex1 flex neiRong" style="overflow: auto;">
+            <!-- overflow:auto 作用是防止内容区溢出出覆盖头部区 使头部区一直在 -->
+            <!-- 左区 -->
+            <div style="flex: 3;" class="flex col mar8 ">
+                <!-- 数据区 -->
+                <div class="flex shuJu">
+                    <div class="baiSe marr yinYing shuju " style="flex: 1; height: 100px;"></div>
+                    <div class="baiSe marr yinYing shuju " style="flex: 1; height: 100px;"></div>
+                    <div class="baiSe marr yinYing shuju " style="flex: 1; height: 100px;"></div>
+                    <div class="baiSe marr0 yinYing shuju " style="flex: 1; height: 100px;"></div>
+                </div>
+                <!-- 列表区 -->
+                <div class="flex col yinYing">
+                    <div class="baiSe mart yinYing " style="height: 150px; "></div>
+                    <div class="baiSe mart yinYing " style="height: 150px; "></div>
+                    <div class="baiSe mart yinYing " style="height: 150px; "></div>
+                    <div class="baiSe mart yinYing " style="height: 150px; "></div>
+                    <div class="baiSe mart yinYing " style="height: 150px; "></div>
+                    <div class="baiSe mart yinYing " style="height: 150px; "></div>
+                    <div class="baiSe mart yinYing " style="height: 150px; "></div>
+                    <div class="baiSe mart yinYing " style="height: 150px; "></div>
+                </div>
+            </div>
+            <!-- 右区 -->
+            <div style="flex: 1;" class="flex col mar8 marl0 youQu">
+                <!-- 右上 -->
+                <div class="baiSe yinYing" style="height: 200px;"></div>
+                <!-- 右下 -->
+                <div class="baiSe yinYing mart" style="height: 400px;"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
